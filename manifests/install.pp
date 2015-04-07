@@ -153,7 +153,7 @@ define nodejs::install (
       }
     }
 
-    ensure_packages([ 'python', $gplusplus_package, 'make' ])
+    #ensure_packages([ 'python', $gplusplus_package, 'make' ])
 
     exec { "nodejs-make-install-${node_version}":
       command => "./configure --prefix=${node_unpack_folder} && make && make install",
